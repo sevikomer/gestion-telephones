@@ -18,7 +18,7 @@ Assurez-vous d’avoir installé sur votre machine :
 ## 📦 Installation du projet
 
 ```bash
-git clone https://github.com/votre-utilisateur/gestion-telephones.git
+git clone https://github.com/sevikomer/gestion-telephones.git
 cd gestion-telephones
 
 ---
