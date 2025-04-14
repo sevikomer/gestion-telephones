@@ -79,6 +79,27 @@ gestion-telephones/
 
 📑 Documentation Swagger auto-générée
 
+📦 Tests unitaires et fonctionnels
+Installation des dépendances :
+npm install
+
+Exécution des tests : Pour lancer tous les tests, exécute :
+npm test
+
+Types de tests :
+Tests unitaires : Vérifient la logique des contrôleurs (création, mise à jour, suppression de téléphones).
+Tests des routes : Vérifient les réponses des API pour les routes GET, POST, PUT, et DELETE.
+
+Exemple de test de route PUT :
+
+Mise à jour d’un téléphone via l’ID :
+it('PUT /phones/:id doit mettre à jour un téléphone', async () => {
+  const updatedData = { name: 'iPhone 12', brand: 'Apple', color: 'Blue', capacity: 128 };
+  const res = await request(app).put(`/phones/${phoneId}`).send(updatedData);
+  expect(res.statusCode).toBe(200);
+  expect(res.body.name).toBe(updatedData.name);
+});
+
 🧪 Scripts utiles
 Backend
 npm run dev       # Lancer le serveur Express avec Nodemon
